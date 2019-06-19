@@ -4,17 +4,14 @@ import requests
 import os.path
 import json
 
-from src.stex_client.constant import JSON_SETTINGS, SOCKET_URL
+from .constant import JSON_SETTINGS, SOCKET_URL
 
 
 class Websocket:
 
     def __init__(self, options=None, debug=False, url=None):
         """ See https://docs.google.com/document/d/1CaD7qV6UzSJ72DMY0qLHnRgabhadVV0Kxc2_lhEFWKA """
-        if url is not None:
-            self.url = url
-        else:
-            self.url = SOCKET_URL
+        self.url = url if url is not None else SOCKET_URL
         self.options = options
         self.current_token = None
 

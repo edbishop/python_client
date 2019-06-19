@@ -5,16 +5,13 @@ import furl
 import os.path
 import json
 
-from src.stex_client.constant import BASE_API_URL, JSON_SETTINGS
+from .constant import BASE_API_URL, JSON_SETTINGS
 
 
 class Private:
 
     def __init__(self, options, url=None):
-        if url is not None:
-            self.url = url
-        else:
-            self.url = BASE_API_URL
+        self.url = url if url is not None else BASE_API_URL
         self.options = options
         self.current_token = None
 

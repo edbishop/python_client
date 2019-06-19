@@ -3,16 +3,13 @@ import pendulum
 import requests
 import furl
 
-from src.stex_client.constant import BASE_API_URL
+from .constant import BASE_API_URL
 
 
 class Public:
 
     def __init__(self, url=None):
-        if url is not None:
-            self.url = url
-        else:
-            self.url = BASE_API_URL
+        self.url = url if url is not None else BASE_API_URL
 
     def ping(self):
         """ See https://apidocs.stex.com/#/Public/get_public_ping """
