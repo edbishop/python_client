@@ -10,12 +10,12 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='stex_client',
+    name='stex-client',
     description='Stex API V3 client for python.',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/StocksExchange/python_client',
-    version=str(LooseVersion('1.0.0')),
+    version=str(LooseVersion('1.0.3')),
     packages=find_packages(),
     python_requires='>=3.5',
     author='STEX (Stocks.Exchange)',
@@ -28,5 +28,10 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     keywords='api client request stocks.exchange stex library websocket-client stex.com',
-    install_requires=['requests', 'furl', 'pendulum', 'python-socketio'],
+    install_requires=[
+        'requests',
+        'furl',
+        'pendulum',
+        'python-socketio'
+    ],
 )
