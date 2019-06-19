@@ -104,3 +104,4 @@ venv.bak/
 .mypy_cache/
 /test.py
 /settings.json
+/.pypirc
