@@ -10,7 +10,7 @@ setup(
     name='stex_client',
     description='Stex API V3 client for python.',
     long_description='Stex provides all the core exchange functionality, and additional merchant tools available via the HTTP API where all returned messages are in JSON. Its much easier to work with the API by using one of the clients provided by Stex.com, so while this page describes the API in case you want or need to build your own client, the examples use the Python client.',
-    url='https://github.com/StocksDevelopment/python_client.git',
+    url='https://github.com/StocksExchange/python_client',
     version=str(LooseVersion('1.0.0')),
     packages=find_packages('src'),
     zip_safe=False,
