@@ -3,7 +3,6 @@ import pendulum
 import requests
 import os.path
 import json
-import websocket
 from .constant import JSON_SETTINGS, SOCKET_URL
 
 

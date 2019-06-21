@@ -15,7 +15,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/StocksExchange/python_client',
-    version=str(LooseVersion('1.0.4')),
+    version=str(LooseVersion('1.0.5')),
     packages=find_packages(),
     python_requires='>=3.5',
     author='STEX (Stocks.Exchange)',
