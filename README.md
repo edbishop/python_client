@@ -88,8 +88,8 @@ private.cancel_trading_orders_by_id(1)
 - [Documentation](https://docs.google.com/document/d/1CaD7qV6UzSJ72DMY0qLHnRgabhadVV0Kxc2_lhEFWKA)
 - [How to get the settings](https://help.stex.com/articles/2740368-how-to-connect-to-the-stex-api-v3-using-postman)
 ```python
-from stex_client.websocket import Websocket
-websocket = Websocket({
+from stex_client.wss import WebsocketStex
+client = WebsocketStex({
     'client': {
         'id': '',
         'secret': ''
@@ -104,17 +104,17 @@ websocket = Websocket({
 def show(*args):
     print(args)
     
-websocket.subscribe_rate(show)
-websocket.subscribe_order_fill_created(1, show)
-websocket.subscribe_glass_total_changed(1, 'sell', show)
-websocket.subscribe_glass_row_changed(1, 'sell', show)
-websocket.subscribe_best_price_changed(1, 'bid', show)
-websocket.subscribe_candle_changed(1, '1D', show)
-websocket.subscribe_balance_changed(1, show)
-websocket.subscribe_user_order('sell', 1, 1, show)
-websocket.subscribe_user_order_deleted( 1, 1, show)
-websocket.subscribe_user_order_fill( 1, 1, show)
-websocket.subscribe_user_order_fill( 1, 1, show)
+client.subscribe_rate(show)
+client.subscribe_order_fill_created(1, show)
+client.subscribe_glass_total_changed(1, 'sell', show)
+client.subscribe_glass_row_changed(1, 'sell', show)
+client.subscribe_best_price_changed(1, 'bid', show)
+client.subscribe_candle_changed(1, '1D', show)
+client.subscribe_balance_changed(1, show)
+client.subscribe_user_order('sell', 1, 1, show)
+client.subscribe_user_order_deleted( 1, 1, show)
+client.subscribe_user_order_fill( 1, 1, show)
+client.subscribe_user_order_fill( 1, 1, show)
 
 ```
 	

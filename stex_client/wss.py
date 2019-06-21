@@ -3,11 +3,11 @@ import pendulum
 import requests
 import os.path
 import json
-
+import websocket
 from .constant import JSON_SETTINGS, SOCKET_URL
 
 
-class Websocket:
+class WebsocketStex:
 
     def __init__(self, options=None, debug=False, url=None):
         """ See https://docs.google.com/document/d/1CaD7qV6UzSJ72DMY0qLHnRgabhadVV0Kxc2_lhEFWKA """
@@ -78,7 +78,6 @@ class Websocket:
             'channel': name,
             'auth': {}
         })
-        self.client.wait()
 
     def subscribe_private(self, name):
         auth = {'headers': {'Authorization': 'Bearer ' + self.get_token()}}
@@ -86,7 +85,6 @@ class Websocket:
             'channel': name,
             'auth': auth
         })
-        self.client.wait()
 
     def get_token(self):
         try:
